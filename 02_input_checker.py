@@ -3,7 +3,7 @@ def user_choice():
 
     text_ok = ["text" , "t" , "txt"]
     integer_ok = ["integer" , "int" , "#" , "number"]
-    image_ok = [ "image" , "img" , "pix" , "picture" , "pic"]
+    image_ok = [ "image" , "img" , "pix" , "picture" , "pic" , "p"]
 
     valid = False
     while not valid:
