@@ -15,5 +15,10 @@ def statement_generator(text, decoration):
 
     return ""
 
+
+
+
+statement_generator("Bit Calculator for Integers, Texts and Images", "-")
+
 # Main routine goes here
-statement_generator("look! stars!", "*")
+statement_generator("look , stars", "*")
