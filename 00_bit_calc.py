@@ -14,11 +14,49 @@ def statement_generator(text, decoration):
     print()
 
     return ""
+# checks user choice is 'integer', 'text' or 'image'
+def user_choice():
+
+    text_ok = ["text" , "t" , "txt"]
+    integer_ok = ["integer" , "int" , "#" , "number"]
+    image_ok = [ "image" , "img" , "pix" , "picture" , "pic" , "p"]
+
+    valid = False
+    while not valid:
+
+        response = input("File type (integer / text / image): ").lower()
+
+        
+        
+        if response in text_ok:
+            return "text"
+
+        elif response in integer_ok:
+              return "integer"
+
+        elif response in image_ok:
+              return "image"
+        
+        elif response == "i":
+            want_integer = input("Press <enter> for an integer or any key for image: ")
+            if want_integer == "":
+                return "integer"
+            else:
+                return "image"
+
+        else:
+                print("Please choose a valid file type!")
+                print()
 
 
+# Main Routine goes here
 
-
+# Heading
 statement_generator("Bit Calculator for Integers, Texts and Images", "-")
 
-# Main routine goes here
-statement_generator("look , stars", "*")
+# Display instructions if user has never used the program before
+
+# Loop to allow multiple calculations per session
+keep_going = ""
+while keep_going == "":
+
