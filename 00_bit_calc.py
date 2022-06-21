@@ -2,6 +2,7 @@
 
 # Puts series of symbols at start and end of text (for emphasis)
 def statement_generator(text, decoration):
+
     
    
     ends = decoration * 5
@@ -14,6 +15,7 @@ def statement_generator(text, decoration):
     print()
 
     return ""
+
 # checks user choice is 'integer', 'text' or 'image'
 def user_choice():
 
@@ -24,10 +26,11 @@ def user_choice():
     valid = False
     while not valid:
 
+        # Ask user for file type
         response = input("File type (integer / text / image): ").lower()
 
-        
-        
+        # for integer, ask for an integer       
+        # (must be a  integer more than/ equal to 0)
         if response in text_ok:
             return "text"
 
@@ -49,7 +52,14 @@ def user_choice():
                 print()
 
 
+
+
+
 # Main Routine goes here
+
+
+
+
 
 # Heading
 statement_generator("Bit Calculator for Integers, Texts and Images", "-")
@@ -59,4 +69,4 @@ statement_generator("Bit Calculator for Integers, Texts and Images", "-")
 # Loop to allow multiple calculations per session
 keep_going = ""
 while keep_going == "":
-
+    print()
