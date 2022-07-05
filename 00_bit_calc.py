@@ -1,6 +1,6 @@
 # Function goes here
 
-# Puts series of symbols at start and end of text (for emphasis)
+# Statement Generator function puts series of symbols at start and end of text (for emphasis)
 def statement_generator(text, decoration):
 
     
@@ -16,7 +16,7 @@ def statement_generator(text, decoration):
 
     return ""
 
-# checks user choice is 'integer', 'text' or 'image'
+# User Choice function checks user choice is 'integer', 'text' or 'image'
 def user_choice():
 
     text_ok = ["text" , "t" , "txt"]
@@ -51,6 +51,33 @@ def user_choice():
                 print("Please choose a valid file type!")
                 print()
 
+#Num Check Function - checks whether integer is greater than low number from parameter
+def num_check (question, low):
+    valid = False
+    while not valid: 
+        
+        #error = "Please enter a value more than 0"
+        error = "Please enter an integer that is more than ""(or equal to) {}".format(low)
+
+        try:
+            #ask user to enter a number
+            response = int(input(question))
+
+            #check if the integer entered is greater or equal to the low number we have provided
+            if response >= low:
+                return response
+
+            else:
+                #output my error message if the integer is not valid
+                print(error)
+                print()
+
+        except ValueError:
+                print("Please enter a number")
+                print()
+          
+
+               
 
 
 
@@ -58,15 +85,21 @@ def user_choice():
 # Main Routine goes here
 
 
-
-
-
-# Heading
+#Heading
 statement_generator("Bit Calculator for Integers, Texts and Images", "-")
 
+
+
+
 # Display instructions if user has never used the program before
+
+
 
 # Loop to allow multiple calculations per session
 keep_going = ""
 while keep_going == "":
-    print()
+
+    #Ask the user for the file type by calling 'User Choice Function'
+    data_type = user_choice()
+    print("You chose", data_type)
+   
